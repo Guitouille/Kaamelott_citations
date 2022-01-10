@@ -1,3 +1,63 @@
 <resources>
     <string name="app_name">Kaamelott citations</string>
+
+    <string name="book">Livre %1s</string>
+
+    <string-array name="characters">
+        <item>Angharad</item>
+        <item>Anna</item>
+        <item>Appius Manilius</item>
+        <item>Arthur</item>
+        <item>Attila</item>
+        <item>Belt</item>
+        <item>Père Blaise</item>
+        <item>Bohort</item>
+        <item>Breccan</item>
+        <item>Le Roi Burgonde</item>
+        <item>Caius Camillus</item>
+        <item>Calogrenant</item>
+        <item>Capito</item>
+        <item>César</item>
+        <item>Cryda de Tintagel</item>
+        <item>Dagonet</item>
+        <item>La Dame du Lac</item>
+        <item>Demetra</item>
+        <item>Drusilla</item>
+        <item>Le Duc d\'Aquitaine</item>
+        <item>Edern</item>
+        <item>Elias de Kelliwic\'h</item>
+        <item>Galessin</item>
+        <item>Gauvain</item>
+        <item>Goustan</item>
+        <item>Grüdü</item>
+        <item>Guenièvre</item>
+        <item>Guethenoc</item>
+        <item>Hervé de Rinel</item>
+        <item>L\'interprète burgonde</item>
+        <item>Le Seigneur Jacca</item>
+        <item>Les Jumelles du pêcheur</item>
+        <item>Le Jurisconsulte</item>
+        <item>Kadoc</item>
+        <item>Karadoc</item>
+        <item>Lancelot</item>
+        <item>Léodagan</item>
+        <item>Loth</item>
+        <item>Le Maître d\'Armes</item>
+        <item>Méléagant</item>
+        <item>Manius Macrinus Firmus</item>
+        <item>Merlin</item>
+        <item>Mevanwi</item>
+        <item>Perceval</item>
+        <item>Roparzh</item>
+        <item>Lucius Sillius Sallustius</item>
+        <item>Séfriane d\'Aquitaine</item>
+        <item>Séli</item>
+        <item>Spurius Cordius Frontinius</item>
+        <item>Le Tavernier</item>
+        <item>Urgan</item>
+        <item>Vérinus</item>
+        <item>Venec</item>
+        <item>Ygerne</item>
+        <item>Yvain</item>
+    </string-array>
 </resources>
