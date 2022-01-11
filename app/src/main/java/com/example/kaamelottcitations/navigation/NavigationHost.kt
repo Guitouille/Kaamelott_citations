@@ -3,6 +3,7 @@ package com.example.kaamelottcitations.navigation
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -13,6 +14,7 @@ import androidx.navigation.navDeepLink
 import com.example.kaamelottcitations.ui.books.BooksGrid
 import com.example.kaamelottcitations.ui.characters.CharacterList
 import com.example.kaamelottcitations.ui.quotes.CharacterQuotesByBookScreen
+import com.example.kaamelottcitations.ui.quotes.CharacterQuotesViewModel
 
 @ExperimentalFoundationApi
 @Composable
@@ -52,9 +54,9 @@ fun NavigationHost(
             if (bookNumber != null) {
                 CharacterList(
                     bookNumber = bookNumber,
-                onCharacterClicked = {bookNumber, characterNameIndex ->
-                    navController.navigate("${NavigationScreens.CharactersQuotes}/$bookNumber/$characterNameIndex")
-                })
+                    onCharacterClicked = { bookNumber, characterNameIndex ->
+                        navController.navigate("${NavigationScreens.CharactersQuotes}/$bookNumber/$characterNameIndex")
+                    })
             }
         }
         composable(
