@@ -23,7 +23,6 @@ fun NavigationHost(
 ) {
 
     val navController = rememberNavController()
-    val backstackEntry = navController.currentBackStackEntryAsState()
 
     NavHost(
         navController = navController,
@@ -54,8 +53,8 @@ fun NavigationHost(
             if (bookNumber != null) {
                 CharacterList(
                     bookNumber = bookNumber,
-                    onCharacterClicked = { bookNumber, characterNameIndex ->
-                        navController.navigate("${NavigationScreens.CharactersQuotes}/$bookNumber/$characterNameIndex")
+                    onCharacterClicked = { book, characterNameIndex ->
+                        navController.navigate("${NavigationScreens.CharactersQuotes}/$book/$characterNameIndex")
                     })
             }
         }
