@@ -5,8 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.kaamelottcitations.data.KaamelottQuotesEntity
-import com.example.kaamelottcitations.data.KaamelottQuotesRepository
+import com.example.kaamelottcitations.data.kaamelottquotes.KaamelottQuotesRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import timber.log.Timber
@@ -24,7 +23,7 @@ class CharacterQuotesViewModel @Inject constructor(private val kaamelottQuotesRe
         viewModelScope.launch {
             kaamelottQuotesRepository.fetchCharacterQuotesByBook(bookNumber, characterName).fold(
                 onSuccess = {
-                    uiState = uiState.copy(quotes= it.toQuotesModel(), loading = false)
+                    uiState = uiState.copy(quotes = it.toQuotesModel(), loading = false)
                     Timber.d("SUCCESS")
                 },
                 onFailure = {

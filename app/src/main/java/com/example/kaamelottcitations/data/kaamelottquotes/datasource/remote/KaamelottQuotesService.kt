@@ -1,4 +1,4 @@
-package com.example.kaamelottcitations.data
+package com.example.kaamelottcitations.data.kaamelottquotes.datasource.remote
 
 import retrofit2.Response
 import retrofit2.http.GET

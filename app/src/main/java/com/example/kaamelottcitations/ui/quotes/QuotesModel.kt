@@ -1,6 +1,6 @@
 package com.example.kaamelottcitations.ui.quotes
 
-import com.example.kaamelottcitations.data.KaamelottQuotesEntity
+import com.example.kaamelottcitations.data.kaamelottquotes.datasource.remote.KaamelottQuotesEntity
 
 data class QuotesModel(
     val quote: List<Quote> = emptyList(),

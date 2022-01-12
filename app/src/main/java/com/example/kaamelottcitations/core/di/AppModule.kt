@@ -1,6 +1,6 @@
 package com.example.kaamelottcitations.core.di
 
-import com.example.kaamelottcitations.data.KaamelottQuotesService
+import com.example.kaamelottcitations.data.kaamelottquotes.datasource.remote.KaamelottQuotesService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

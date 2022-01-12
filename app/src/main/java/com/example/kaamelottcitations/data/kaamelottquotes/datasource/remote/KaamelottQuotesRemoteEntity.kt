@@ -1,4 +1,4 @@
-package com.example.kaamelottcitations.data
+package com.example.kaamelottcitations.data.kaamelottquotes.datasource.remote
 
 import com.google.gson.annotations.SerializedName
 
