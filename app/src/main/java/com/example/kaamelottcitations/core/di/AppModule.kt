@@ -1,9 +1,14 @@
 package com.example.kaamelottcitations.core.di
 
-import com.example.kaamelottcitations.data.kaamelottquotes.datasource.remote.KaamelottQuotesService
+import android.content.Context
+import androidx.room.Room
+import com.example.kaamelottcitations.data.kaamelottquotes.datasource.local.QuotesDatabase
+import com.example.kaamelottcitations.data.kaamelottquotes.datasource.remote.QuotesService
+import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -31,7 +36,19 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideKaamelottQuotesService(retrofit: Retrofit) =
-        retrofit.create(KaamelottQuotesService::class.java)
+    fun provideKaamelottQuotesService(retrofit: Retrofit): QuotesService =
+        retrofit.create(QuotesService::class.java)
 
+    @Provides
+    @Singleton
+    fun provideQuotesDatabase(@ApplicationContext context: Context) =
+        Room.databaseBuilder(
+            context,
+            QuotesDatabase::class.java,
+            "quotes-database"
+        ).build()
+
+    @Provides
+    @Singleton
+    fun provideGson() = Gson()
 }

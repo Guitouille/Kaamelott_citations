@@ -1,6 +1,6 @@
 package com.example.kaamelottcitations.ui.quotes
 
-import com.example.kaamelottcitations.data.kaamelottquotes.datasource.remote.KaamelottQuotesEntity
+import com.example.kaamelottcitations.data.kaamelottquotes.datasource.remote.QuotesRemoteEntity
 
 data class QuotesModel(
     val quote: List<Quote> = emptyList(),
@@ -19,7 +19,7 @@ data class MetaData(
     val episode: String
 )
 
-fun KaamelottQuotesEntity.toQuotesModel(): QuotesModel {
+fun QuotesRemoteEntity.toQuotesModel(): QuotesModel {
     return QuotesModel(
         this.quotes.map {
             Quote(

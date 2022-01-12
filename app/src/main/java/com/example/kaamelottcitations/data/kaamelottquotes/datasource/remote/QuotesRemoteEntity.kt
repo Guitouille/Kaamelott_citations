@@ -2,7 +2,7 @@ package com.example.kaamelottcitations.data.kaamelottquotes.datasource.remote
 
 import com.google.gson.annotations.SerializedName
 
-data class KaamelottQuotesEntity(
+data class QuotesRemoteEntity(
     val status: Int = -1,
     @SerializedName("citation")
     val quotes: List<QuoteEntity> = emptyList()

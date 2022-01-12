@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringArrayResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.kaamelottcitations.R
@@ -33,10 +34,10 @@ fun CharacterQuotesByBookScreen(
             )
             ProgressIndicator()
         } else {
-            LazyColumn {
-                items(uiState.quotes.quote.size) {
-                    QuoteItem(quote = uiState.quotes.quote[it])
-                }
+            if (uiState.quotes.quote.isEmpty()) {
+                NoQuotes()
+            } else {
+                QuoteList(quotesModel = uiState.quotes)
             }
         }
     }
@@ -54,6 +55,38 @@ fun ProgressIndicator() {
     }
 }
 
+@Preview(widthDp = 200, heightDp = 100)
+@Composable
+fun ProgressIndicatorPreview() {
+    ProgressIndicator()
+}
+
+@Composable
+fun NoQuotes() {
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text("Pas de citations, désolé")
+    }
+}
+
+@Preview(widthDp = 200, heightDp = 100)
+@Composable
+fun NoQuotesPreview() {
+    NoQuotes()
+}
+
+@Composable
+fun QuoteList(quotesModel: QuotesModel) {
+    LazyColumn {
+        items(quotesModel.quote.size) {
+            QuoteItem(quote = quotesModel.quote[it])
+        }
+    }
+}
+
 @Composable
 fun QuoteItem(quote: Quote) {
     Column(
@@ -66,4 +99,21 @@ fun QuoteItem(quote: Quote) {
         Text(text = quote.metadata.episode)
         Text(text = quote.metadata.season)
     }
+}
+
+@Preview
+@Composable
+fun QuoteItemPreview() {
+    QuoteItem(
+        quote = Quote(
+            text = "Texte de la citation",
+            MetaData(
+                actor = "actor",
+                author = "author",
+                character = "character",
+                episode = "episode",
+                season = "season"
+            )
+        )
+    )
 }
