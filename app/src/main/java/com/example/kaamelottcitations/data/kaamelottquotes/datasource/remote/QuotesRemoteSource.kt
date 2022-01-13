@@ -1,5 +1,6 @@
 package com.example.kaamelottcitations.data.kaamelottquotes.datasource.remote
 
+import kotlinx.coroutines.delay
 import javax.inject.Inject
 
 class QuotesRemoteSource @Inject constructor(private val quotesService: QuotesService) {
@@ -8,6 +9,7 @@ class QuotesRemoteSource @Inject constructor(private val quotesService: QuotesSe
         book: Int,
         character: String
     ): QuotesRemoteEntity {
+        delay(2000)
         var quotesList = QuotesRemoteEntity()
         val result = quotesService.getCharacterQuoteByBook(book, character)
 

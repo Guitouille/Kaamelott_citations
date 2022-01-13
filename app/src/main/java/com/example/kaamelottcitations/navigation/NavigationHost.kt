@@ -1,22 +1,17 @@
 package com.example.kaamelottcitations.navigation
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
 import com.example.kaamelottcitations.ui.books.BooksGrid
 import com.example.kaamelottcitations.ui.characters.CharacterList
 import com.example.kaamelottcitations.ui.quotes.CharacterQuotesByBookScreen
-import com.example.kaamelottcitations.ui.quotes.CharacterQuotesViewModel
 
-@ExperimentalFoundationApi
 @Composable
 fun NavigationHost(
     modifier: Modifier = Modifier

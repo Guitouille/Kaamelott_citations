@@ -2,6 +2,19 @@
     <string name="app_name">Kaamelott citations</string>
 
     <string name="book">Livre %1s</string>
+    <string name="screen_title_book">Livres</string>
+    <string name="screen_title_characters">Personnages</string>
+    <string name="screen_title_quotes">Citations</string>
+
+    <string name="screen_book_see_characters">VOIR LES PERSONNAGES</string>
+
+    <string name="actor">Acteur: %1s</string>
+    <string name="author">Auteur: %1s</string>
+    <string name="character">Personnage: %1s</string>
+    <string name="episode">Episode: %1s</string>
+    <string name="season">Saison: %1s</string>
+    <string name="no_quotes">Pas de citations, désolé</string>
+    <string name="loading">Chargement en cours...</string>
 
     <string-array name="characters">
         <item>Angharad</item>
