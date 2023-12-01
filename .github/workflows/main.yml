@@ -10,4 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Start pull_request_dependabot workflow
-        run: echo "kikou"
+        run: |
+          echo "kikou"
