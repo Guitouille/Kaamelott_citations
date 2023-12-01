@@ -1,0 +1,13 @@
+name: Pull request dependabot
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  start-circle-ci-workflow:
+    if: ${{ github.event.issue.pull_request }} && ${{ contains(github.event.comment.body, '/test') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start pull_request_dependabot workflow
+        run: echo "kikou"
