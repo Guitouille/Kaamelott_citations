@@ -11,4 +11,7 @@ jobs:
     steps:
       - name: Start pull_request_dependabot workflow
         run: |
-          echo "kikou"
+          echo ${{ github.event.issue.pull_request.id }}
+          echo ${{ github.event.comment.body }}
+          echo ${{ github.ref_name }}
+          echo ${{ github.head_ref }}
